@@ -1,0 +1,15 @@
+.plugin-starter-d-flex {
+    display: flex;
+    &.gap-10 {
+        gap: 10px;
+    }
+    &.align-items-center {
+        align-items: center;
+    }
+    &.justify-content-center {
+        justify-content: center;
+    }
+}
+.ps-cursor-pointer {
+    cursor: pointer;
+}

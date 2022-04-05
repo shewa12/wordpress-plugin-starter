@@ -1,0 +1,102 @@
+# Copyright (C) 2022 Shewa
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugin Starter 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plugin-starter\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-03-28T16:44:18+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: plugin-starter\n"
+
+#. Plugin Name of the plugin
+#: inc/Admin/Pages/UsersList.php:72
+msgid "Plugin Starter"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://sheawzone.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin starter for the WP Developer to speed up plugin development."
+msgstr ""
+
+#. Author of the plugin
+msgid "Shewa"
+msgstr ""
+
+#: inc/Admin/Pages/UsersList.php:63
+msgid "Plugin Starter - Users List "
+msgstr ""
+
+#: inc/Ajax/Request.php:47
+msgid "Nonce verification failed"
+msgstr ""
+
+#: templates/users-list.php:86
+msgid "No record found"
+msgstr ""
+
+#: templates/users-list.php:94
+msgid "Invalid data"
+msgstr ""
+
+#: views/users-list.php:17
+msgid "Refresh"
+msgstr ""
+
+#: assets/js/backend/ps-backend.js:66
+msgid "Something went wrong, please try again."
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list.js:6
+msgid "Users List"
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list.js:7
+msgid "Basic user listing table. Get data from API and show case here."
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list-edit.js:99
+msgid "Loading users list..."
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list-edit.js:107
+msgid "Column Visibility"
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list-edit.js:110
+msgid "Show ID"
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list-edit.js:117
+msgid "Show First Name"
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list-edit.js:124
+msgid "Show Last Name"
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list-edit.js:131
+msgid "Show Email"
+msgstr ""
+
+#: dist/blocks.build.js:1
+#: src/block/ps-users-list-edit.js:138
+msgid "Show Date"
+msgstr ""

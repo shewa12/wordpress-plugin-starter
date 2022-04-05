@@ -1,0 +1,14 @@
+.plugin-starter-page-wrapper {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        tr:nth-child(even) {
+            background-color: #e3e3e3;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #e3e3e3;
+        }
+    }
+}

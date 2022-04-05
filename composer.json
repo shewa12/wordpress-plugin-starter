@@ -1,0 +1,17 @@
+{
+    "name": "pluginstarter",
+    "description": "Starter plugin for the WP Developer to speed up plugin development.",
+    "autoload": {
+        "psr-4": {
+            "PluginStarter\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shewa",
+            "email": "shewa12kpi@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
