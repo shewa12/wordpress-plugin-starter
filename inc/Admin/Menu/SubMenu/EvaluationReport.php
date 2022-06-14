@@ -57,7 +57,7 @@ class EvaluationReport implements SubMenuInterface {
 	 * @return string  slug
 	 */
 	public function slug(): string {
-		return 'tutor-periscope-evalution-report';
+		return 'plugin-start-evaluation-report';
 	}
 
 	/**
