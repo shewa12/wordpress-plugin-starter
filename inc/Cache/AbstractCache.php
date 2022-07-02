@@ -46,9 +46,9 @@ abstract class AbstractCache {
 	 * @since v1.0.0
 	 */
 	public function set_cache(): void {
-		do_action( 'aw_task_before_' . $this->key(), $this->cache_data() );
+		do_action( 'plugin_starter_before_' . $this->key(), $this->cache_data() );
 		set_transient( $this->key(), $this->cache_data(), $this->cache_time() );
-		do_action( 'aw_task_after_' . $this->key(), $this->cache_data() );
+		do_action( 'plugin_starter_after_' . $this->key(), $this->cache_data() );
 	}
 
 	/**
