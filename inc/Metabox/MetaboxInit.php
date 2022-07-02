@@ -2,12 +2,12 @@
 /**
  * Initialize meta box module
  *
- * @package TutorPeriscope\Metabox
+ * @package PluginStarter\Metabox
  *
- * @since v2.0.0
+ * @since v1.0.0
  */
 
-namespace Tutor_Periscope\Metabox;
+namespace PluginStarter\Metabox;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
@@ -21,7 +21,7 @@ class MetaboxInit {
 	/**
 	 * Load meta boxes
 	 *
-	 * @since v2.0.0
+	 * @since v1.0.0
 	 *
 	 * @return void
 	 */

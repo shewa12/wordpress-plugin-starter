@@ -5,7 +5,7 @@
  *
  * @package PluginStarter\Metabox
  *
- * @since v2.0.0
+ * @since v1.0.0
  */
 
 namespace PluginStarter\Metabox;
@@ -32,7 +32,7 @@ class EvaluationMetabox extends MetaboxFactory {
 	/**
 	 * Create new meta box, implementation of abstract method
 	 *
-	 * @since v2.0.0
+	 * @since v1.0.0
 	 *
 	 * @return MetaboxInterface
 	 */
@@ -49,7 +49,7 @@ class EvaluationMetabox extends MetaboxFactory {
 	/**
 	 * Meta box view
 	 *
-	 * @since v2.0.0
+	 * @since v1.0.0
 	 *
 	 * @return void
 	 */
