@@ -2,11 +2,10 @@
 /**
  * Plugin utilities management
  *
- * @package  PluginStarter\Cache
- *
- * @author   Shewa <shewa12kpi@gmail.com>
- *
- * @since    v1.0.0
+ * @package  PluginStarter\Utilities
+ * @author Shewa <shewa12kpi@gmail.com.com>
+ * @link https://shewazone.com
+ * @since 1.0.0
  */
 
 namespace PluginStarter\Utils;

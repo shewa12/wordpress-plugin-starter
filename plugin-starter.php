@@ -13,13 +13,7 @@
  * Domain Path: /assets/languages
  */
 
-use PluginStarter\Admin\Admin;
 use PluginStarter\Assets\Enqueue;
-use PluginStarter\Ajax\Request;
-use PluginStarter\Blocks\Block;
-use PluginStarter\Commands\Commands;
-use PluginStarter\ShortCodes\LoadShortCodes;
-use PluginStarter\WPRestApi\EndPoints;
 
 if ( ! class_exists( 'PluginStarter' ) ) {
 
@@ -134,13 +128,7 @@ if ( ! class_exists( 'PluginStarter' ) ) {
 		 * @return void
 		 */
 		public function load_packages() {
-			// new Admin();
-			// new Enqueue();
-			// new Request();
-			// new Block();
-			// new EndPoints();
-			// new LoadShortCodes();
-			// new Commands();
+			new Enqueue();
 		}
 	}
 	// trigger.

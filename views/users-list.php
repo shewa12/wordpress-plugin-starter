@@ -1,24 +1,16 @@
 <?php
 /**
- * Users list page
+ * Template for output view on users list block
  *
- * @package PluginStarter\Page
- *
- * @author Shewa <shewa12kpi@gmail.com>
- *
- * @since v1.0.0
+ * @package PluginStarter\Views
+ * @author Shewa <shewa12kpi@gmail.com.com>
+ * @link https://shewazone.com
+ * @since 1.0.0
  */
 
 ?>
-<div class="wrap">
-	<?php do_action( 'aw_task_before_user_list_page_wrapper' ); ?>
-	<div class="plugin-starter-page-wrapper">
-		<button type="button" class="ps-cursor-pointer" id="plugin-starter-page-refresh">
-			<?php esc_html_e( 'Refresh', 'plugin-starter' ); ?>
-		</button>
-		<div class="plugin-starter-page-content">
-
-		</div>
-	</div>
-	<?php do_action( 'aw_task_after_user_list_page_wrapper' ); ?>
+<div class='plugin-starter-users-list'>
+	<h2>
+		<?php esc_html_e( 'Dummy Template', 'plugin-starter' ); ?>
+	</h2>
 </div>
