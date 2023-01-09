@@ -2,6 +2,7 @@
 test/
 build/
 node_modules/
+vendor/
 .idea/
 .vscode/
 .history
