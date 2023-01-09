@@ -134,13 +134,13 @@ if ( ! class_exists( 'PluginStarter' ) ) {
 		 * @return void
 		 */
 		public function load_packages() {
-			new Admin();
-			new Enqueue();
-			new Request();
-			new Block();
-			new EndPoints();
-			new LoadShortCodes();
-			new Commands();
+			// new Admin();
+			// new Enqueue();
+			// new Request();
+			// new Block();
+			// new EndPoints();
+			// new LoadShortCodes();
+			// new Commands();
 		}
 	}
 	// trigger.
