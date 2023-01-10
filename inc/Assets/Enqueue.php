@@ -31,6 +31,9 @@ class Enqueue {
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'load_front_end_scripts' ) );
 
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'script_text_domain' ) );
+
+		// WP Cli command.
+		add_action( 'init', array( __CLASS__, 'register_cli_command' ) );
 	}
 
 	/**
@@ -91,6 +94,25 @@ class Enqueue {
 	public static function script_text_domain() {
 		$plugin_data = PluginStarter::plugin_data();
 		wp_set_script_translations( 'plugin-starter-backend', $plugin_data['plugin_path'] . 'assets/languages/' );
+	}
+
+	public static function register_cli_command() {
+		\WP_CLI::add_command(
+			'plugin-starter replace-slug',
+			function( $args ) {
+				if ( is_array( $args ) && count( $args ) ) {
+					$slug = $args[0];
+					if ( $slug ) {
+						\WP_CLI::success( $slug );
+					} else {
+						\WP_CLI::error( 'Invalid slug' );
+					}
+				} else {
+					\WP_CLI::warning( 'Slug argument is missing' );
+					\WP_CLI::line( 'Example command: wp plugin-starter replace_slug some-slug' );
+				}
+			}
+		);
 	}
 
 }
