@@ -1,5 +1,5 @@
 {
-    "name": "pluginstarter",
+    "name": "shewa/plugin-starter",
     "description": "Starter plugin for the WP Developer to speed up plugin development.",
     "autoload": {
         "psr-4": {
