@@ -7,5 +7,5 @@
  */
 const { __ } = wp.i18n;
 document.addEventListener("DOMContentLoaded", function () {
-console.log(__('Hi there', 'plugin-starter'));
+console.log(__('Hello WordPress Plugin Starter User', 'plugin-starter'));
 });
