@@ -34,7 +34,7 @@ class Commands {
 	 *
 	 * @return void
 	 */
-	public function replace_slug( $args, $assoc_args ) {
+	public function replace( $args, $assoc_args ) {
 		$slug = $assoc_args['slug'] ?? '';
 		$namespace = $assoc_args['namespace'] ?? '';
 		if ( '' === $slug || '' === $namespace ) {
