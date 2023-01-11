@@ -53,11 +53,15 @@ class Utilities {
 	 *
 	 * @return bool
 	 */
-	public static function update_slug( $slug, $dir = '' ) {
+	public static function update_slug( $slug, $namespace, $dir = '' ) {
 		$plugin_data = PluginStarter::plugin_data();
 		$dir         = '' === $dir ? $plugin_data['plugin_path'] : $dir;
 
-		$needles = array( 'plugin-starter', 'Plugin Starter' );
+		$needles = array(
+			'plugin-starter' => $slug,
+			'Plugin Starter' => $namespace,
+			'PluginStarter'  => $namespace,
+		);
 		$exclude = array( '.git', 'vendor', 'node_modules' );
 		$files   = scandir( $dir );
 
@@ -71,17 +75,17 @@ class Utilities {
 				// If directory then get back & scan files again.
 				if ( ! in_array( $file, array( '.', '..' ) ) && is_dir( $dir . '/' . $file ) ) {
 					$child_dir = $dir . DIRECTORY_SEPARATOR . $file;
-					self::update_slug( $slug, $child_dir );
+					self::update_slug( $slug, $namespace, $child_dir );
 				} else {
 
 					if ( ! in_array( $file, array( '.', '..' ) ) ) {
 						$abs_file_path = trailingslashit( $dir ) . $file;
 						$file_content  = file_get_contents( $abs_file_path, true );
-
-						foreach ( $needles as $needle ) {
-						$file_content = str_replace( $needle, $slug, $file_content );
-						file_put_contents( $abs_file_path, $file_content );
-						}
+						error_log( $abs_file_path );
+						// foreach ( $needles as $key => $needle ) {
+						// 	$file_content = str_replace( $key, $needle, $file_content );
+						// 	file_put_contents( $abs_file_path, $file_content );
+						// }
 					}
 				}
 			}

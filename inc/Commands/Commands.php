@@ -10,6 +10,7 @@
 
 namespace PluginStarter\Commands;
 
+use Exception;
 use PluginStarter\Utils\Utilities;
 
 /**
@@ -23,23 +24,27 @@ class Commands {
 	 * Replace slug command
 	 *
 	 * Usage: wp wps replace_slug some-slug
+	 * ## OPTIONS
+	 *
+	 * [--slug=<some-slug>]
+	 *
+	 * [--namespace=<NameSpace>]
 	 *
 	 * @param array $args args passed though command.
 	 *
 	 * @return void
 	 */
-	public function replace_slug( $args ) {
-		if ( is_array( $args ) && count( $args ) ) {
-			$slug = $args[0];
-			if ( $slug ) {
-				Utilities::update_slug( $slug );
-				\WP_CLI::success( $slug );
-			} else {
-				\WP_CLI::error( 'Invalid slug' );
-			}
+	public function replace_slug( $args, $assoc_args ) {
+		$slug = $assoc_args['slug'] ?? '';
+		$namespace = $assoc_args['namespace'] ?? '';
+		if ( '' === $slug || '' === $namespace ) {
+			\WP_CLI::warning( 'slug & namespace arguments are required' );
 		} else {
-			\WP_CLI::warning( 'Slug argument is missing' );
-			\WP_CLI::line( 'Example command: wp wps replace_slug some-slug' );
+			try {
+				Utilities::update_slug( $slug, $namespace );
+			} catch ( Exception $e ) {
+				\WP_CLI::error( $slug );
+			}
 		}
 	}
 }
