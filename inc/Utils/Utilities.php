@@ -81,11 +81,11 @@ class Utilities {
 					if ( ! in_array( $file, array( '.', '..' ) ) ) {
 						$abs_file_path = trailingslashit( $dir ) . $file;
 						$file_content  = file_get_contents( $abs_file_path, true );
-						error_log( $abs_file_path );
-						// foreach ( $needles as $key => $needle ) {
-						// 	$file_content = str_replace( $key, $needle, $file_content );
-						// 	file_put_contents( $abs_file_path, $file_content );
-						// }
+
+						foreach ( $needles as $key => $needle ) {
+							$file_content = str_replace( $key, $needle, $file_content );
+							file_put_contents( $abs_file_path, $file_content );
+						}
 					}
 				}
 			}
