@@ -14,6 +14,7 @@
  */
 
 use PluginStarter\Assets\Enqueue;
+use PluginStarter\Commands\RegisterCommands;
 
 if ( ! class_exists( 'PluginStarter' ) ) {
 
@@ -129,6 +130,7 @@ if ( ! class_exists( 'PluginStarter' ) ) {
 		 */
 		public function load_packages() {
 			new Enqueue();
+			new RegisterCommands();
 		}
 	}
 	// trigger.
