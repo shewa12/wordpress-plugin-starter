@@ -44,3 +44,21 @@ WordPRess Plugin Starter is a plugin for the WordPress Plugin Developer. This is
 	- ###### Utils
 - ##### templates
 - ##### views
+
+### Extension
+New services/classes should be placed inside **inc**  directory with a separate directory. Then to import new services/classes open plugin main file & change code like below:
+
+    <?php
+        use PluginStarter\Assets\Enqueue;
+        use PluginStarter\Commands\RegisterCommands;
+		use YourNewClasses;
+
+	   public function load_packages() {
+			new Enqueue();
+			new RegisterCommands();
+			new YourNewClasses();
+		}
+    ?>
+    
+
+Imported new class at line no 4 & object created at line no: 9. Import statements laying on top of file and `load_packages` method on the bottom of file.
