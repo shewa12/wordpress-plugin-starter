@@ -1,65 +1,46 @@
-# Plugin Starter
+# WordPress Plugin Starter
+![](https://img.shields.io/badge/Required-PHP%20%3E%3D7.1-blue) ![](https://img.shields.io/badge/Tested%20up%20to-WordPress%206.1-brightgreen)
 
-Plugin Starter, a plugin for the WP Plugin Developer. This is starter plugin for start your new plugin. It is consist of basic features that will help to speed up your plugin development. Don't need start everything from scratch!
+WordPRess Plugin Starter is a plugin for the WordPress Plugin Developer. This is a  starter plugin for start your new plugin development.
 
-This plugin contains Ajax Endpoint, WP REST API Endpoint, ShortCode, Gutenberg Block & WP CLI Custom Command, Gulp task runner and much more.
+###Advantages
+- No need to start everything from scratch
+- Standard plugin structure ready
+- PSR-4 Composer auto-loading ready
+- Gulp task runner ready for making plugin build
+- SCSS file to css file convertion ready
+- Translation domain-mapping ready
 
-### Coding Standards
+###Todos
+1. Clone GIT Repository
+2. Run `composer install` command from project root directory
+3. Run `npm install` command from project root directory
 
-    PHP OOP, namespace, abstract, trait has been using. WordPress Coding standards has been using throughout the plugin. PHPCS & WPCS tools are using for maintaining coding standards. 
+In the plugin every where **plugin-starter** is used as plugin prefix/slug. **PluginStarter** is used as a namespace. Which you may want to change. To change you can use following **WP CLI** command:
 
-## Features
+`wp wps replace --slug=some-slug --namespace=NameSpace`
 
-1. Backend Admin Page
+Do not forget to update dummy slug & namespace with real one. After this you need to do update composer class mapping as per new namespace. To do this run below command:
 
-    On the WordPress admin side there should a menu named Plugin Starter. This page contain user's list and there is a refresh button for refreshing list.
+`composer dump-autoload`
 
-2. Short code [plugin-starter-users-list]
+That is all :relaxed:
 
-    Short code accept 5 arguments for on-off visibility of table column. By default every column's visibility is on. To off the column's visibility you can pass arguments like below:
-    [plugin-starter-users-list id=off] (supported arguments are: id, fname, lname, email, date)
+### Task Runner
+1. `npm run watch` command to watch changes process scss files to css files
+2. `npm run build` to process scss files & make zip build of plugin
+3. `npm run make-pot` to create language pot file, WP CLI required
+4. `npm run plugin-build` combination of command 2 & 3
 
-3. Gutenberg Block ( Users List )
-
-    On Gutenberg block there should be a block named "Users List". Add it for show casing user's list table. On the sidebar of block's setting you can manage visibility of table columns.
-
-4. REST API Endpoint ( http://yoursite.com/wp-json/plugin-starter/v1/users )
-
-    There is an API available for making HTTP Request. Endpoint should be like above.
-
-5. Ajax Hook ( wp_ajax_aw_task_user_list, wp_ajax_nopriv_aw_task_user_list )
-
-    Ajax hook available for making ajax request.
-
-6. Custom Command for WP CLI
-
-    There is a command available for updating "Request per hour". By default cache time is for 1 hour. It means it will make HTTP Request 1 time per hour. After 1 hour cache will be expired and it will call remote API for getting user's list. To update 1 time per hour limit WP CLI command is available.
-
-    Command: wp plugin-starter request_per_hour 2 (here 2 is the limit)
-
-## Plugin Requirements
-
-- PHP version 7.0 (min requires, 7.4 recommended) or later. Tested up to PHP 8.0.0
-- WordPress version 5.2 or later. Tested up to 5.9
-
-## Installation
-
-1. Unzip files and put inside plugin folder of your website. For local installation path would something like this: /Applications/MAMP/htdocs/your-site/wp-content/plugins/
-
-    That's ALL.
-
-### Composer
-
-    Composer auto loading has been using for auto loading files.
-
-### Node Modules
-
-    Gulp file using for watching & compiling SASS SCSS files. It is also using for making pot file for translation.
-
-### Caching
-
-    For caching using WP native Transient API. That is really for those data that is supposed to be expired. It's really straight forward and works pretty well as expected. It's avoid server environment headache.
-
-## Plugin Extension
-
-    Door is open for extending plugin. Number of hooks are available.
+### Directory Structure
+- #####assets
+	- ######js
+	- ######css
+	- ######languages
+	- ######scss
+- #####inc
+	- ######Assets
+	- ######Commands
+	- ######Utils
+- #####templates
+- #####views

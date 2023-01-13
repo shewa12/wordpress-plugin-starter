@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp-build": "gulp build",
+    "watch": "gulp watch",
+    "build": "gulp build",
     "make-pot": "wp i18n make-pot . assets/languages/plugin-starter.pot",
     "plugin-build": "composer install --no-dev && npm run make-pot && npm run gulp-build"
   },
