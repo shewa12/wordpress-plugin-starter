@@ -4,17 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cgb-scripts start",
-    "build": "cgb-scripts build",
-    "eject": "cgb-scripts eject",
     "gulp-build": "gulp build",
     "make-pot": "wp i18n make-pot . assets/languages/plugin-starter.pot",
-    "plugin-build": "npm run make-pot && npm run gulp-build"
+    "plugin-build": "composer install --no-dev && npm run make-pot && npm run gulp-build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cgb-scripts": "^1.23.1",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-notify": "^4.0.0",
