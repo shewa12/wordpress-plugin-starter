@@ -15,6 +15,7 @@ WordPRess Plugin Starter is a plugin for the WordPress Plugin Developer. This is
 1. Clone GIT Repository
 2. Run `composer install` command from project root directory
 3. Run `npm install` command from project root directory
+4. Activate the plugin, on the admin side you should see a console message: **Hello WPS User** . All set :grin:
 
 	In the plugin every where **plugin-starter** is used as plugin prefix/slug. **PluginStarter** is used as a namespace. Which you may want to change. To change you can use following **WP CLI** command:
 
